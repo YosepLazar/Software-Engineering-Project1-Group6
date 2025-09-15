@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckjivhdkkd6al"]
+
+[ext_resource type="Script" uid="uid://nxxy13vll0wl" path="res://settings.gd" id="1_bvb5x"]
+[ext_resource type="Texture2D" uid="uid://b76y48itgnng1" path="res://OIP.webp" id="2_2fv1l"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_bvb5x")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 160.0
+offset_bottom = 80.0
+
+[node name="main_menu_from_lvl1_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Main Menu"
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(966.489, 541.433)
+scale = Vector2(4.04435, 4.01179)
+texture = ExtResource("2_2fv1l")
+
+[connection signal="pressed" from="VBoxContainer/main_menu_from_lvl1_button" to="." method="_on_main_menu_from_lvl_1_button_pressed"]
