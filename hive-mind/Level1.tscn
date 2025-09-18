@@ -1,7 +1,7 @@
 [gd_scene load_steps=40 format=3 uid="uid://cgvpj88hqw4ow"]
 
 [ext_resource type="Texture2D" uid="uid://dhnqqxlel1y56" path="res://art/Bee1/bee_spirtesheet.png" id="1_cove1"]
-[ext_resource type="Script" uid="uid://q2ikrrgfva7v" path="res://level_1.gd" id="1_dwyiq"]
+[ext_resource type="Script" uid="uid://8gs850pykhya" path="res://level_1_grid.gd" id="1_lmyl5"]
 [ext_resource type="Texture2D" uid="uid://yg3g1p3agvr3" path="res://art/Bee2/Abeja.png" id="2_dwyiq"]
 [ext_resource type="Texture2D" uid="uid://p1ik3d6djhow" path="res://art/Bee3/Bee_Idle.png" id="3_dn5ey"]
 [ext_resource type="Script" uid="uid://02hsgmlq2lia" path="res://button.gd" id="5_dn5ey"]
@@ -267,7 +267,7 @@ animations = [{
 }]
 
 [node name="Level1" type="Node2D"]
-script = ExtResource("1_dwyiq")
+script = ExtResource("1_lmyl5")
 
 [node name="BeeDesign1" type="AnimatedSprite2D" parent="."]
 position = Vector2(435, 272)
