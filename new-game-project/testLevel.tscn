@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://clyxtk70n6u25"]
+
+[ext_resource type="PackedScene" uid="uid://j333dtl35e8k" path="res://graph_node.tscn" id="1_8a0p6"]
+[ext_resource type="PackedScene" uid="uid://de0mun2bbrsxg" path="res://path.tscn" id="2_vgrmv"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="graphNode" parent="." instance=ExtResource("1_8a0p6")]
+position = Vector2(201, 455)
+path_scene = ExtResource("2_vgrmv")
+
+[node name="graphNode2" parent="." instance=ExtResource("1_8a0p6")]
+position = Vector2(220, 91)
+connections = Array[NodePath]([NodePath("../graphNode"), NodePath("../graphNode4")])
+path_scene = ExtResource("2_vgrmv")
+
+[node name="graphNode3" parent="." instance=ExtResource("1_8a0p6")]
+position = Vector2(1001, 59)
+path_scene = ExtResource("2_vgrmv")
+
+[node name="graphNode4" parent="." instance=ExtResource("1_8a0p6")]
+position = Vector2(684, 498)
+connections = Array[NodePath]([NodePath("../graphNode2")])
+path_scene = ExtResource("2_vgrmv")

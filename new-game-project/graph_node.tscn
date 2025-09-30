@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://j333dtl35e8k"]
+
+[ext_resource type="Texture2D" uid="uid://cet8i4yobj50i" path="res://node_dry.png" id="1_frjgo"]
+[ext_resource type="Script" uid="uid://cphnlplepuhs0" path="res://node.gd" id="1_ni65l"]
+[ext_resource type="Texture2D" uid="uid://b884hecejq3nn" path="res://node_water.png" id="2_ni65l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_frjgo"]
+radius = 12.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0j3so"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_frjgo")
+}],
+"loop": true,
+"name": &"fillerpicdry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ni65l")
+}],
+"loop": true,
+"name": &"fillerpicwater",
+"speed": 5.0
+}]
+
+[node name="graphNode" type="RigidBody2D"]
+physics_interpolation_mode = 2
+input_pickable = true
+gravity_scale = 0.0
+script = ExtResource("1_ni65l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_frjgo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(7.62939e-06, 1.19209e-07)
+scale = Vector2(0.025, 0.025)
+sprite_frames = SubResource("SpriteFrames_0j3so")
+animation = &"fillerpicwater"
