@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs47bmgv3psy1"
-path="res://.godot/imported/dried_lands.png-9b051c261218226e2e890f1244998477.ctex"
+uid="uid://g68msqde3nag"
+path="res://.godot/imported/9.png-e36b4d12c14c95f7a3b625f94f13987a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Story/dried_lands.png"
-dest_files=["res://.godot/imported/dried_lands.png-9b051c261218226e2e890f1244998477.ctex"]
+source_file="res://art/Story/9.png"
+dest_files=["res://.godot/imported/9.png-e36b4d12c14c95f7a3b625f94f13987a.ctex"]
 
 [params]
 

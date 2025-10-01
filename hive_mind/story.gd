@@ -9,7 +9,9 @@ var bg_4 = preload("res://art/Story/4.png")
 var bg_5 = preload("res://art/Story/5.png")
 var bg_6 = preload("res://art/Story/6.png")
 var bg_7 = preload("res://art/Story/7.png")
-var bg_dry = preload("res://art/Story/dried_lands.png")
+var bg_8 = preload("res://art/Story/8.png")
+var bg_9 = preload("res://art/Story/9.png")
+var bg_10 = preload("res://art/Story/10.png")
 
 func _ready() -> void:
 	# Call dialogue automatically when scene starts
@@ -30,6 +32,8 @@ func _ready() -> void:
 	_dialogue8()
 	await get_tree().create_timer(3).timeout
 	_dialogue9()
+	await get_tree().create_timer(3).timeout
+	_dialogue10()
 	await get_tree().create_timer(3).timeout
 	get_tree().change_scene_to_file("res://Main.tscn")
 
@@ -96,7 +100,7 @@ func _dialogue8() -> void:
 		load("res://dialogue/story8.dialogue"),
 		"start",
 		)
-	background.texture = bg_dry
+	background.texture = bg_8
 
 func _dialogue9() -> void:
 	# Pass a callback to be called when the dialogue finishes
@@ -104,4 +108,12 @@ func _dialogue9() -> void:
 		load("res://dialogue/story9.dialogue"),
 		"start",
 		)
-	background.texture = bg_dry
+	background.texture = bg_9
+
+func _dialogue10() -> void:
+	# Pass a callback to be called when the dialogue finishes
+	DialogueManager.show_example_dialogue_balloon(
+		load("res://dialogue/story10.dialogue"),
+		"start",
+		)
+	background.texture = bg_10
