@@ -24,12 +24,14 @@ func _show_current_step():
 		currentTip.queue_free()
 
 	currentTip = toolScene.instantiate()
+	#var ui_root = get_tree().root.get_node("res://tooltip.tscn/Node2D/CanvasLayer/Control")
+	#ui_root.add_child(currentTip)
 	get_tree().current_scene.add_child(currentTip)
 
 	get_tree().paused = true
 	#currentTip.pause_mode = Node.PAUSE_MODE_PROCESS
 
-	currentTip.show_tooltip(text, tooltip_position, func():
+	currentTip.showToolTip(text, tooltip_position, func():
 		get_tree().paused = false
 		currentStep += 1
 		_show_current_step()
