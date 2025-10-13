@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2i2kc0os00i"]
+
+[ext_resource type="Script" uid="uid://brt57ych0463j" path="res://tooltip.gd" id="1_gwequ"]
+[ext_resource type="Script" uid="uid://myrgykp24512" path="res://scripts/tooltipManager.gd" id="1_oxk8h"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_oxk8h")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_gwequ")
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="tooltipLabel" type="Label" parent="Control/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="closeButton" type="Button" parent="Control/Panel"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Got it"
+
+[node name="Arrow" type="Polygon2D" parent="Control"]

@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://p1ik3d6djhow" path="res://art/Bee3/Bee_Idle.png" id="3_fr6qw"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5s8la"]
+load_path = "res://.godot/imported/bee_spirtesheet.png-b5fedaae355ac5bf8a22a20ed46af4fb.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fr6qw"]
 atlas = SubResource("CompressedTexture2D_5s8la")
@@ -139,14 +140,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="tutorial" type="Node2D"]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="tutBut" type="Button" parent="CanvasLayer"]
-offset_right = 8.0
-offset_bottom = 8.0
-text = "Press Me!"
+[node name="Node2D" type="Node2D"]
 
 [node name="BeeDesign1" type="AnimatedSprite2D" parent="."]
 position = Vector2(84, 100)
@@ -166,7 +160,7 @@ frame_progress = 0.10014
 speed_scale = 10.0
 
 [node name="BeeDesign3_0" type="AnimatedSprite2D" parent="."]
-position = Vector2(718.99994, 318)
+position = Vector2(93, 468)
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_tpsgm")
 animation = &"idle_left"

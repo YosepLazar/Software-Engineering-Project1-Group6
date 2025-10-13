@@ -1,23 +1,11 @@
-; Engine configuration file.
-; It's best edited using the editor UI and not directly,
-; since the parameters that go here are not all obvious.
-;
-; Format:
-;   [section] ; section goes between []
-;   param=value ; assign values to parameters
-
 config_version=5
 
 [application]
 
-config/name="Hive-Mind"
+config/name="Hive-Mind (4.4)"
 run/main_scene="uid://jid27u5ye0s5"
-config/features=PackedStringArray("4.5", "GL Compatibility")
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
-
-[autoload]
-
-TooltipManager="*res://scripts/TooltipManager.gd"
 
 [display]
 
