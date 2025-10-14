@@ -1,0 +1,11 @@
+# Dialogue lines for the story
+# Use IDs that DialogueManager can start with
+
+[forest_intro]
+text="What a beautiful forest!"
+
+[dry_forest_scene]
+text="Wait… the river has dried up."
+
+[mountain_scene]
+text="The mountains loom over the valley."

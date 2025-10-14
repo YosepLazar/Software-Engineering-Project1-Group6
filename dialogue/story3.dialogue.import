@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://beniumv64lvj6"
+path="res://.godot/imported/story3.dialogue-fd9692f77342ee2a222c084e4d421019.tres"
+
+[deps]
+
+source_file="res://dialogue/story3.dialogue"
+dest_files=["res://.godot/imported/story3.dialogue-fd9692f77342ee2a222c084e4d421019.tres"]
+
+[params]
+
+defaults=true

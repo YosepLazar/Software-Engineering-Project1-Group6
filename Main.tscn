@@ -1,0 +1,77 @@
+[gd_scene load_steps=6 format=3 uid="uid://jid27u5ye0s5"]
+
+[ext_resource type="Script" uid="uid://02hsgmlq2lia" path="res://button.gd" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://b3hbpbp3he6to" path="res://main.gd" id="1_uu6xs"]
+[ext_resource type="Theme" uid="uid://dci0itgejhs43" path="res://buttons.tres" id="2_fos0i"]
+[ext_resource type="Texture2D" uid="uid://crjeoubl50aam" path="res://art/Moutain_Background.webp" id="3_r0du0"]
+[ext_resource type="AudioStream" uid="uid://bfmva0522c15h" path="res://sounds/music/title_music.mp3" id="4_cm0pq"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_uu6xs")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -300.0
+offset_right = 250.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 15
+
+[node name="play_button" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_fos0i")
+text = "Play"
+script = ExtResource("1_glv2v")
+
+[node name="story_button" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_fos0i")
+text = "Story"
+script = ExtResource("1_glv2v")
+
+[node name="settings_button" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_fos0i")
+text = "Settings"
+script = ExtResource("1_glv2v")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/VBoxContainer/settings_button"]
+z_index = -1
+position = Vector2(249, -6.12555)
+scale = Vector2(2.3925, 2.38809)
+texture = ExtResource("3_r0du0")
+
+[node name="quit_buttton" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "Closes The Game"
+theme = ExtResource("2_fos0i")
+text = "Quit"
+script = ExtResource("1_glv2v")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+follow_viewport_enabled = true
+
+[node name="TitleMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_cm0pq")
+volume_db = -15.0
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/play_button" to="CanvasLayer/VBoxContainer/play_button" method="_on_play_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/story_button" to="CanvasLayer/VBoxContainer/story_button" method="_on_story_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/settings_button" to="CanvasLayer/VBoxContainer/settings_button" method="_on_settings_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/quit_buttton" to="CanvasLayer/VBoxContainer/play_button" method="_on_quit_buttton_pressed"]

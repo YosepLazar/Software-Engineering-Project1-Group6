@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://de0mun2bbrsxg"]
+
+[ext_resource type="Script" uid="uid://bcg5pfpnv8dri" path="res://texture_rect.gd" id="1_ohhw7"]
+[ext_resource type="Texture2D" uid="uid://ban80ye26dldu" path="res://rectangle dry.png" id="1_s0p3g"]
+
+[node name="TextureRect" type="TextureRect"]
+offset_left = 1.0
+offset_top = -46.0
+offset_right = 201.0
+offset_bottom = -1.0
+texture = ExtResource("1_s0p3g")
+stretch_mode = 1
+script = ExtResource("1_ohhw7")
