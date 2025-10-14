@@ -34,6 +34,7 @@ text = "Play"
 script = ExtResource("1_glv2v")
 
 [node name="settings_button" type="Button" parent="CanvasLayer/VBoxContainer"]
+process_mode = 3
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 100
@@ -47,6 +48,7 @@ scale = Vector2(2.3925, 2.36192)
 texture = ExtResource("3_r0du0")
 
 [node name="quit_buttton" type="Button" parent="CanvasLayer/VBoxContainer"]
+process_mode = 3
 layout_mode = 2
 size_flags_vertical = 3
 tooltip_text = "Closes The Game"

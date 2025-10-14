@@ -10,19 +10,20 @@ var on_closed_callback = null
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	closeBut.pressed.connect(closePressed)
-	hide()
+	#hide()
 	
 func showToolTip(text: String, target: Vector2, callback: Callable):
+	print("Showing tooltip at:", target - Vector2(-100, -300), "text:", text)
+	show()
 	tooltipLab.text = text
 	on_closed_callback = callback
 	
-	var offset = Vector2(0, -80)
+	var offset = Vector2(-100, -300)
 	global_position = target + offset
 	
 	arrow.global_position = target
 	arrow.look_at(global_position)
 	
-	show()
 	
 func closePressed():
 	hide()
